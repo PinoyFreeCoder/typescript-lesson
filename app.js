@@ -1,11 +1,15 @@
-var userData;
-var trueData;
-userData = 'now';
-userData = 5;
-if (typeof userData === "string") {
-    trueData = userData;
+"use strict";
+class Vehicle {
+    constructor(model) {
+        this.modelTypes = model;
+    }
 }
-function generateErrorCode(description, errorCode) {
-    throw { message: description, code: errorCode };
-}
-generateErrorCode("Error happened", 502);
+const model_type = {
+    type: 'Car',
+    color: 'Blue',
+    event: () => {
+        console.log('Event Function');
+    },
+};
+const car = new Vehicle(model_type);
+console.log(car);
